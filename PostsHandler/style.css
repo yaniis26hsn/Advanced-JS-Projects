@@ -1,0 +1,36 @@
+#users-SBar{
+    background-color:rgb(0, 38, 72);;
+    color: rgb(0, 24, 176);
+    width: 30%;
+    border: black solid;
+    border-radius: 20px;
+}
+.uIcon:hover{
+border: solid rgb(178, 152, 2);
+width: 90%;
+
+}
+
+.username{
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.uIcon{
+    background-color: rgb(233, 245, 255);
+    border-radius: 10px;
+    border: solid black ;
+    padding-left: 10px;
+}
+body{
+    background-color: rgb(85, 83, 83);
+}
+.post{
+    background-color: aliceblue;
+    padding: 10px;
+    border: solid 5px;
+    border-radius: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.selected{
+    border-color: white;
+}
