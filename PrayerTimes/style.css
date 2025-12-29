@@ -1,0 +1,58 @@
+#header1{
+    background-color: rgb(2, 116, 255);
+    text-align: center;
+    
+border: black solid 5px;
+border-radius: 5px;
+
+}
+#header2{
+    background-color: rgba(128, 128, 128, 0.816);
+display: flex;
+
+align-items:center ;
+justify-content:space-around ;
+align-content: center;
+
+border: black solid 5px;
+border-radius: 5px;
+}
+
+#header3{
+    background-color: rgba(128, 128, 128, 0.846);
+display: flex;
+align-items:center ;
+justify-content:space-around ;
+align-content: center;
+border: black solid 5px;
+border-radius: 5px;
+}
+table{
+    background-color: rgba(0, 0, 139, 0.783);
+   color: aliceblue;
+    display: block;
+    margin: 0 auto;
+     justify-items: center;
+font-size: large;
+border: 10px solid rgb(68, 0, 255);
+border-radius: 3px;
+}
+body{
+    background-image: url(src/mecca-saudi-arabia-aerial-view-makkah-clock-tower-masjid-al-haram-jan-384117177.webp);
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: center;
+   background-attachment: fixed;
+   background-size: 50% auto; 
+   background-color: black;
+
+}
+table {
+  border-collapse: collapse; /* makes borders look like a single line */
+}
+
+table td, table th {
+  border: 1px solid black; 
+  padding: 16px;      
+
+}
