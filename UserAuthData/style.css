@@ -1,0 +1,37 @@
+#interface{
+    display: block;
+    margin: 0 auto;
+    width: 500px;
+    border: 4px solid rgb(35, 0, 49);
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    background-color: rgba(3, 157, 228, 0.794);
+}
+input{
+  border: solid 2px rgba(21, 21, 227, 0.448);
+   display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    height: 25px;
+    width: 200px;
+
+}
+button{
+    display: block;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: larger;
+
+}
+label{
+     display: block;
+    margin: 0 auto;
+}
+body{
+    background-color: rgb(18, 0, 105);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <br> <br> <br>
+    <form id="interface" > 
+    <label for="un">USERNAME :</label>
+    
+    <input type="text"  id="un"  placeholder="username">
+    <br>
+    <label for="password">PASSWORD :</label>
+    <!--we could add required prop to the two inputs but we prefferd showing the response of the api(only for learning purposes)-->
+    <input type="password"  id="pw" placeholder="password" >
+      <br>
+    
+    <button type="button" onclick="LogIn()"> LOG IN </button>
+    <h3 id="response"></h3>
+    </form>
+    
+    <script  src="index.js"></script>
+    
+</body>
+</html>
