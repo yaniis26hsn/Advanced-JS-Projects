@@ -1,4 +1,4 @@
-import axios from 'axios';
+
 let parametres = {
     country : "DZ" ,
     city : "Bejaia"
@@ -9,7 +9,9 @@ let englishDay
 let ArabicDay 
 let ArabicMonth
 let ArabicYear 
-axios.get('http://api.aladhan.com/timingByCity?country=SA&city=Bejaia',{
+let HijriDay 
+axios.get('https://api.aladhan.com/v1/timingsByCity?city=Bejaia&country=Algeria&method=2',{
+    
     params:parametres
 }
 
@@ -18,10 +20,12 @@ axios.get('http://api.aladhan.com/timingByCity?country=SA&city=Bejaia',{
     console.log("succesfull response") ;
    timings = response.data.data.timings ;
    ReadableDate = response.data.data.date.readable ;
-   englishDay = response.data.data.date.weekday.hijri.en ;
-   ArabicDay = response.data.data.date.weekday.hijri.ar;
-   ArabicMonth = response.data.data.date.Month.hijri.ar;
-   ArabicYear = response.data.data.date.Year.hijri.ar;
+   englishDay = response.data.data.date.hijri.weekday.en ;
+   ArabicDay = response.data.data.date.hijri.weekday.ar;
+   ArabicMonth = response.data.data.date.hijri.month.ar;
+   ArabicYear = response.data.data.date.hijri.year;
+   HijriDay = response.data.data.date.hijri.day;
+   document.getElementById("Location").innerText = "Algeria, Bejaia" ;
    
 UpdateData() ;
    
@@ -32,12 +36,12 @@ UpdateData() ;
 function UpdateData(){
     document.getElementById("Fajr-t").innerHTML = timings.Fajr ;
     document.getElementById("Dhohr-t").innerHTML = timings.Dhuhr ;
-    document.getElementById("Chourouk-t").innerHTML = timings.Sunrise ;
     document.getElementById("Asr-t").innerHTML = timings.Asr ;
+    document.getElementById("Chourouq-t").innerHTML = timings.Sunrise ;
     document.getElementById("Maghrib-t").innerHTML = timings.Sunset ;
     document.getElementById("Aishaa-t").innerHTML = timings.Isha ;
-    document.getElementById("DH").innerHTML =  englishDay +" "+ ReadableDate + "<br>" + ArabicYear +" "+ ArabicMonth +" "+ ArabicDay ;
-
+    document.getElementById("DH").innerHTML =  englishDay +" "+ ReadableDate + "<br>" + " " + ArabicYear + " " + ArabicMonth +" "+  HijriDay +" "+ ArabicDay ;
+    document.getElementById("MidNight").innerHTML =  timings.Midnight;
+    document.getElementById("LastThird").innerHTML =  timings.Lastthird;
     
-    document.getElementById("Location").innerHTML = "Algeria, Bejaia" ;
 }
